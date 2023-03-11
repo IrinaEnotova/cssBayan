@@ -25,9 +25,9 @@ body {
 }
 
 .main-container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
-  padding: 2.2em;
+  padding: 1.5em;
 }
 
 .main-heading {
@@ -43,15 +43,32 @@ body {
 .accordion-item {
   display: block;
   padding: 0.4em;
-  border-bottom: 1px solid var(--brown-color);
   cursor: pointer;
 }
 
 .accordion-item:not(:last-child) {
   margin-bottom: 1em;
+  border-bottom: 1px solid var(--brown-color);
 }
 
 .accordion-toggle {
   opacity: 0;
 	display: none;
+}
+
+.accordion__content {
+  display: flex;
+  justify-content: center;
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+}
+
+.accordion-toggle:checked ~ .accordion__content{
+  margin-top: 0.5em;
+  height: fit-content;
+}
+
+.accordion-img {
+  margin-bottom: 0.5em;
 }
